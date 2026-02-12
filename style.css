@@ -242,8 +242,12 @@ caption {
 }
 
 .message {
-  resize: vertical;
+  resize: none;
   max-width: 100%;
+  width: 100%;
+  min-height: 20rem;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .input-groups-container {
