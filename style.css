@@ -4,6 +4,8 @@
 /* Import Inter font from Google */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/* GENERAL STYLES */
+
 :root {
   font-family: Inter, sans-serif;
   font-size: 62.5%;
@@ -26,8 +28,29 @@ section {
 body {
   display: grid;
   grid-template-columns: 1fr;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
+
+h2 {
+  color: var(--HEADING-COLOR);
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+p {
+  color: #0f2a44;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.red {
+  color: red;
+}
+/* 
+input[type="checkbox"]:checked {
+  background-color: black;
+  color: red;
+} */
 
 /* STYLING SITE MAIN HEADER */
 .main-header {
@@ -90,13 +113,14 @@ body {
 
 .hero-content h1 {
   font-size: 4.8rem;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: bold;
 }
 
 .hero-content p {
+  font-weight: 400;
   font-size: 1.8rem;
-  padding-right: 7.2rem;
+  padding-right: 9px;
   line-height: 1.6;
   color: #dddddd;
 }
@@ -107,6 +131,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4.8rem 19.2rem;
+  padding-bottom: 6.2rem;
   text-align: center;
   gap: 4.8rem;
 }
@@ -120,10 +145,16 @@ body {
 .how-to-start-section h2 {
   color: var(--HEADING-COLOR);
   font-size: 3.2rem;
+  font-weight: 600;
 }
 
 .how-to-start-section p {
   padding-inline: 3.2rem;
+}
+
+.how-to-start-section p > span {
+  font-weight: 700;
+  color: #1274a4;
 }
 
 /* VIDEO PLAYER */
@@ -133,6 +164,7 @@ body {
 
 /* BUTTON STYLE */
 .btn {
+  font-weight: 600;
   display: inline-block;
   padding: 1rem 2.4rem;
   background-color: var(--HEADING-COLOR);
@@ -142,28 +174,42 @@ body {
 }
 
 .btn--outline {
-  outline: 1px solid #fff;
+  outline: 0.5px solid #ddd;
   background-color: transparent;
   text-decoration: none;
 }
 
+.btn-submit {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* STUDENT TESTIMONIAL SECTION */
-.student-testimonial-section {
+.planet-section {
   background-color: var(--PRIMARY-BG);
   padding: 4.8rem 9.6rem;
-  gap: 2.4rem;
+  padding-bottom: 5.6rem;
+  gap: 4rem;
   justify-content: center;
   text-align: center;
 }
 
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 33.3rem);
-  gap: 2.4rem;
+.planet-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.testimonials img {
+.planets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(2, 33.3rem); */
+  gap: 1.6rem;
+}
+
+.planets img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -171,51 +217,82 @@ body {
 }
 
 /* STUDENTS SCHEDULES */
-.class-schedules {
+.planetary-facts-section {
   padding: 4.8rem 9.6rem;
-  gap: 2.4rem;
+  gap: 4.4rem;
+}
+
+.planetary-facts-section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 .table {
+  /* border-width: 1px; */
   width: 100%;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   text-align: center;
-  border: 2px solid #fff;
+  border: 1.5px solid #fff;
   border-top-left-radius: var(--BORDER-RADIUS);
   border-top-right-radius: var(--BORDER-RADIUS);
   overflow: hidden;
 }
 
 thead {
+  border: 1.5px solid #fff;
   background-color: var(--HEADING-COLOR);
   color: #fff;
+  /* font-weight: 700; */
 }
 
 thead td,
 thead th,
 tbody td {
-  padding: 1.2rem 2rem;
+  border: 1.5px solid #fff;
+  padding: 1.6rem 2.6rem;
+}
+
+thead th {
+  padding-inline: 2.2rem;
 }
 
 tbody th {
-  padding-inline: 1rem;
+  border: 1.5px solid #fff;
+  padding-inline: 2.6rem;
   background-color: var(--SECONDARY-BG);
   color: #000;
 }
 
 tbody td {
   background-color: var(--PRIMARY-BG);
-  color: #000;
+  color: #212121;
+  font-weight: 500;
 }
 
-caption {
+.caption {
+  color: #0f2a44;
+  font-weight: 600;
+  font-size: 1.8rem;
   text-align: left;
 }
 
 /* CONTACT US SECTION */
 .contact-us-section {
   padding: 4.8rem 9.6rem;
-  gap: 2.4rem;
+  gap: 4.4rem;
+}
+
+.contact-us-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .form {
@@ -227,11 +304,12 @@ caption {
 .form-input_fields-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.submit-btn {
-  /* grid-column: 1 / span 2; */
+.submit-btn-container {
+  width: 30rem;
+  padding-top: 2.4rem;
 }
 
 .input-field,
@@ -250,6 +328,10 @@ caption {
   white-space: pre-wrap;
 }
 
+small {
+  color: #555;
+}
+
 .input-groups-container {
   display: flex;
   flex-direction: column;
@@ -257,6 +339,65 @@ caption {
   gap: 0.8rem;
 }
 
+.input-groups {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.input-groups div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
 /* .form button[type="submit"] {
   grid-column: 1 / span 2;
 } */
+
+/* FOOTER SECTION */
+.footer {
+  color: #fff;
+  background-color: var(--CTA-BG);
+  display: flex;
+  flex-direction: column;
+  padding: 4.8rem 9.6rem;
+  padding-top: 6.4rem;
+  gap: 4rem;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: hsla(0, 0%, 100%, 0.441);
+}
+.copyright {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.other-pages-links {
+  display: flex;
+  gap: 3.2rem;
+}
