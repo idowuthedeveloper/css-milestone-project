@@ -94,6 +94,7 @@ input[type="checkbox"]:checked {
 }
 
 .hero-img img {
+  filter: brightness(150%);
   max-width: 100%;
   /* max-height: 100%; */
   object-fit: cover;
@@ -113,7 +114,7 @@ input[type="checkbox"]:checked {
 
 .hero-content h1 {
   font-size: 4.8rem;
-  line-height: 1.2;
+  line-height: 1.3;
   font-weight: bold;
 }
 
@@ -405,13 +406,14 @@ small {
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 576px) {
-  :root {
-    font-size: 50%;
+  h2 {
+    font-size: 2.8rem;
   }
-
+  /* HEADER SECTION */
   .main-header {
+    padding: 0;
     flex-direction: column;
-    padding: 1.6rem 0;
+    padding-top: 4rem;
     justify-content: center;
     align-items: center;
   }
@@ -420,9 +422,128 @@ small {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo span {
+    font-size: 1.6rem;
   }
 
   .logo-img {
-    max-width: 50%;
+    max-width: 80%;
+  }
+
+  /* HERO SECTION */
+  .hero-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 4rem 2.4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hero-img {
+    max-width: 90vw;
+  }
+
+  .hero-img img {
+    transform: scale(1.02);
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    padding-inline: 2.4rem;
+  }
+
+  .hero-content-text {
+    gap: 4rem;
+  }
+
+  /* HOW TO START SECTION */
+  .how-to-start-section {
+    padding: 7.2rem 2.4rem;
+  }
+
+  .how-to-start-section h2 {
+    font-size: 2.8rem;
+    padding-inline: 3.2rem;
+  }
+
+  .how-to-start-section p {
+    padding-inline: 2.4rem;
+  }
+
+  .video-player {
+    max-height: fit-content;
+  }
+
+  /* PLANET SECTION */
+  .planet-section {
+    gap: 6rem;
+    padding: 7.2rem 2.4rem;
+  }
+
+  .planet-section-text {
+    gap: 2.8rem;
+  }
+
+  .planet-section-text h2 {
+    padding-inline: 2.4rem;
+  }
+
+  .planet-section-text p {
+    padding-inline: 2.4rem;
+  }
+
+  .planets {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* PLANETARY FACTS SECTION */
+  .planetary-facts-section {
+    display: none;
+  }
+
+  /* CONTACT US SECTION */
+  .contact-us-section {
+    padding: 7.2rem 2.4rem;
+    gap: 5.6rem;
+  }
+
+  .contact-us-text {
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .input-groups {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .submit-btn-container {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 4rem 2.4rem;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .other-pages-links {
+    gap: 4rem;
   }
 }
