@@ -506,19 +506,19 @@ small {
   }
 
   .planets figure:nth-child(1) img {
-    border-top-left-radius: 5.2rem;
+    border-top-left-radius: 3.6rem;
   }
 
   .planets figure:nth-child(2) img {
-    border-top-right-radius: 5.2rem;
+    border-top-right-radius: 3.6rem;
   }
 
   .planets figure:nth-child(7) img {
-    border-bottom-left-radius: 5.2rem;
+    border-bottom-left-radius: 3.6rem;
   }
 
   .planets figure:nth-child(8) img {
-    border-bottom-right-radius: 5.2rem;
+    border-bottom-right-radius: 3.6rem;
   }
 
   /* PLANETARY FACTS SECTION */
